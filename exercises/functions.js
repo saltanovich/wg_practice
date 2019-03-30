@@ -47,15 +47,10 @@ export function fibGenerator() {
   let a = -2;
   let b = -1;
   return function () {
-    if (a === -2) {
+    if (a < 0) {
       a += 1;
       b += 1;
-      return 0;
-    }
-    if (a === -1) {
-      a += 1;
-      b += 1;
-      return 1;
+      return b;
     }
     const result = a + b;
     a = b;
